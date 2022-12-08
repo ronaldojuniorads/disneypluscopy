@@ -1,0 +1,498 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-weight: 100;
+    color: #ffffff;   
+}
+body{
+    background-image: linear-gradient(180deg,rgb(0, 0, 0), 1%,#131521);    
+    
+}
+
+/*HEADER*/
+header{
+    width: 100%;
+    height: 80px;
+    padding: 15px;
+    font-family: 'Fredoka One';
+}
+header > nav{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+header nav div#logo{
+    width: 10%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav div#logo::after{
+    content: url("../imagens/logo.svg");
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+header nav div#menu{
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2%;
+}
+header nav div#menu ul{
+    display: flex;
+    gap: 50px;
+}
+header nav div#menu ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+
+}
+header nav div#menu ul li span{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+header nav div#menu ul li:nth-child(1) span::before{
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    background-image: url("../imagens/homeIcon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+header nav div#menu ul li:nth-child(2) span::before{
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    background-image: url("../imagens/searchIcon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+header nav div#menu ul li:nth-child(3) span::before{
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    background-image: url("../imagens/addIcon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+header nav div#menu ul li:nth-child(4) span::before{
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    background-image: url("../imagens/starIcon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+header nav div#menu ul li:nth-child(5) span::before{
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    background-image: url("../imagens/filmes.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+header nav div#menu ul li:nth-child(6) span::before{
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    background-image: url("../imagens/seriesIcon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+header nav div#menu ul li div.linha{
+    background-color: #ffffff;
+    width: 0%;
+    height: 3px;
+    transition: width 0.1s;
+}
+header nav div#menu ul li:hover div.linha{
+    width: 100%;
+}
+
+header nav div#perfil{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+header nav div#perfil div#nome_foto{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 2;
+}
+header nav div#perfil div#nome_foto::after{
+    content: "";
+    width: 50%;
+    height: 100%;
+    background-image: url("../imagens/imagemPerfil.png");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+header nav div#perfil div#nome_foto span{
+    display: none;
+}
+header nav div#perfil:hover div#sub_menu_perfil{
+    height: 500px;
+} 
+header nav div#perfil:hover div#sub_menu_perfil nav{
+    display: flex;
+}
+header nav div#perfil:hover div#nome_foto span{
+    display: inline;
+}
+header nav div#perfil div#sub_menu_perfil{
+    z-index: 1;
+    width: 250px;
+    height: 0px;
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 1%;
+    background-color: #131313;
+    border-radius: 3%;
+    transition: height 0.3s;
+    
+}
+header nav div#perfil div#sub_menu_perfil nav{
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+    font-size: 0.8rem;
+}
+header nav div#perfil div#sub_menu_perfil nav li{
+    cursor: pointer;
+}
+header nav div#perfil div#sub_menu_perfil nav li:nth-child(1){
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 7%;
+}
+header nav div#perfil div#sub_menu_perfil nav li:nth-child(1) div{
+    width: 45px;
+    height: 100%;
+    border-radius: 100%;
+    position: relative;
+    background-image: url("../imagens/imagemPrefil2.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; 
+}
+header nav div#perfil div#sub_menu_perfil nav li:nth-child(2){
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 7%;
+}
+header nav div#perfil div#sub_menu_perfil nav li:nth-child(2) div{
+    width: 45px;
+    height: 100%;
+    position: relative;
+    background-color: #414141;
+    border-radius: 100%;
+    background-image: url("../imagens/addIcon.svg");
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat; 
+}
+
+/*MAIN*/
+main{
+    font-family: 'Fredoka One';
+}
+    /*CONTAINER 1 - SLIDES*/
+main div#container1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+main div#container1 > div#slides{
+    width: 93%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+}
+
+main div#container1 > div#slides div.slide{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+main div#container1 > div#slides div.slide img:first-child{
+    width: 100%;
+    height: 100%; 
+    border-radius: 10px;
+}
+main div#container1 > div#slides div.slide img:last-child{
+    position: absolute;
+    width: 40%;
+    top: 7%; 
+    
+}
+main div#container1 div#btn_slides{
+    width: 25%; 
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+}
+main div#container1 div#btn_slides div{
+    width: 10px;
+    height: 10px;
+    background-color: #969EAB;
+    border-radius: 100%;
+    cursor: pointer;
+}
+main div#container1 > div.nextIcon{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+main div#container1 >  div.nextIcon::after{
+    content: ">";
+    font-size: 3rem;
+    color: #ffffff;
+}
+main div#container1 > div.previousIcon{
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+}
+main div#container1 > div.previousIcon::before{
+    content: "<";
+    font-size: 3rem;
+    color: #ffffff;
+    
+}
+
+
+/*MAIN CONTAINER 2*/
+main div#container2 {
+    padding: 20px;
+}
+
+main div#container2 div#marcas{
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    gap: 0 20px;
+}
+main div#container2 div#marcas div{
+    width: 210px;
+    height: 120px;
+    border-radius: 8px;
+    background-color: #2F313D;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 30px 20px -20px black;
+    transition: all 0.7s;
+    cursor: pointer;
+
+}
+main div#container2 div#marcas div:hover{
+    transform: scale(1.08);
+    outline: 3px solid #ffffff;
+}
+main div#container2 div#marcas div:nth-child(1){
+    background-image: url("../imagens/marcaDisney.png");
+}
+main div#container2 div#marcas div:nth-child(1):hover{
+    background-image: url("../videos/disneyGif.gif");
+}
+main div#container2 div#marcas div:nth-child(2){
+    background-image: url("../imagens/marcaPixa.png");
+}
+main div#container2 div#marcas div:nth-child(2):hover{
+    background-image: url("../videos/pixarGif.gif");
+}
+main div#container2 div#marcas div:nth-child(3){
+    background-image: url("../imagens/marcaMarvel.png");
+}
+main div#container2 div#marcas div:nth-child(3):hover{
+    background-image: url("../videos/marvelGif.gif");
+}
+main div#container2 div#marcas div:nth-child(4){
+    background-image: url("../imagens/marcaStarWars.png");
+}
+main div#container2 div#marcas div:nth-child(4):hover{
+    background-image: url("../videos/starwarsGif.gif");
+}
+main div#container2 div#marcas div:nth-child(5){
+    background-image: url("../imagens/marcaNG.png");
+}
+main div#container2 div#marcas div:nth-child(5):hover{
+    background-image: url("../videos/NGGif.gif");
+}
+
+/*MAIN CONTAINER 3*/
+main div#container3{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 30px;
+    
+}
+main div#container3 section{ 
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    gap: 10px 0;
+    padding: 0 20px;
+    overflow: hidden;
+    position: relative;
+    
+
+}
+main div#container3 section div.box-filmes{
+    display: flex;
+    align-items: center;
+    transition: margin 1s;
+    justify-content: flex-start;    
+    gap: 20px;
+    padding: 30px 0;
+}
+main div#container3 section div.box-filme{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    flex-shrink: 0;
+    box-shadow: 0 25px 20px -15px  black;  
+    transition: all 0.3s;
+    cursor: pointer;
+
+}
+main div#container3 section div.box-filme:hover{
+        transform: scale(1.04);
+        outline: 3px solid #ffffff;
+}
+main div#container3 section div.box-filme img{
+    width: 100%;  
+    border-radius: 8px;
+}
+
+main div#container3 section div.box-filmes div.nextIcon{
+    position: absolute;
+    width: 60px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+    cursor: pointer;
+}
+main div#container3 section div.box-filmes  div.nextIcon:hover{
+    opacity: 1;
+}
+main div#container3 section div.box-filmes  div.nextIcon::after{
+    content: ">";
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ffffff;
+}
+main div#container3 section div.box-filmes div.previousIcon{
+    position: absolute;
+    left: 0;
+    width: 60px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    cursor: pointer;
+   
+}
+main div#container3 section div.box-filmes div.previousIcon:hover{
+    opacity: 1;
+}
+
+main div#container3 section div.box-filmes div.previousIcon::before{
+    content: "<";
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ffffff;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 100px 0;
+    font-size: .7rem;
+    font-family: Arial, Helvetica, sans-serif;
+   background-color: #0E0B14;
+}
+footer div:first-child nav{
+    display: flex;
+    gap: 10px;
+    
+
+}
+footer div:nth-child(2) nav{
+    display: flex;
+    gap: 10px;
+}
